@@ -45,3 +45,11 @@ data文件夹内附带了一份测试汉化文本。
 《美版火红中字增益版发布》：https://www.poketb.com/bbs/thread-14340-1-1.html
 
 《口袋妖怪 红宝石·绿宝石 美版中字增益版发布》：https://www.poketb.com/bbs/thread-17152-1-1.html
+
+## ArmIPS下的宝可梦脚本编辑
+
+代码写法参考及相关脚本宏文件作者：本站第一萌新
+
+地址：
+
+《ASM杂项集合【802/绿宝石】》：https://www.pmcenter.cn/forum.php?mod=viewthread&tid=111388

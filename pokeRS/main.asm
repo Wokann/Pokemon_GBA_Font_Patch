@@ -1,9 +1,9 @@
 .gba
 .thumb
 .loadtable "./charmap.txt"
-.create "./pokeruby_chs.gba",0x08000000
+.create "./pokeruby_chsfont.gba",0x08000000
 .close
-.open "./baserom.gba","./pokeruby_chs.gba",0x08000000
+.open "./baserom.gba","./pokeruby_chsfont.gba",0x08000000
 
 ;定义函数地址
 .include "./include/global.s"

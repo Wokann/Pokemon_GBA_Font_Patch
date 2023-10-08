@@ -41,5 +41,7 @@ data文件夹内附带了一份测试汉化文本。
 作者及鸣谢人员：enler,liuyanghejerry,Roy,luojingmin,飞眼,某位嵌入式开发的圈外人
 
 地址：
+
 《美版火红中字增益版发布》：https://www.poketb.com/bbs/thread-14340-1-1.html
+
 《口袋妖怪 红宝石·绿宝石 美版中字增益版发布》：https://www.poketb.com/bbs/thread-17152-1-1.html

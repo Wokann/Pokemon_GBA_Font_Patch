@@ -36,3 +36,47 @@ getchinesewidth:
     mov r0, r1
     pop r1
     bx r1
+
+/*
+原函数
+static u8 GetGlyphWidth(struct Window *win, u32 glyph)
+{
+    u8 width = 8;
+
+#ifdef BUGFIX_GLYPHWIDTH
+    if (win->language != LANGUAGE_JAPANESE)
+#else
+    if (win->language == LANGUAGE_ENGLISH)
+#endif
+    {
+        width = win->spacing;
+        if (!win->spacing)
+        {
+            switch (win->fontNum)
+            {
+            case 3:
+                width = sFont3Widths[glyph];
+                break;
+            case 4:
+            case 5:
+                width = sFont4Widths[sFontType1Map[2 * glyph + 1]];
+                break;
+            case 0:
+                width = sFont0Widths[glyph];
+                break;
+            case 1:
+            case 2:
+                width = sFont1Widths[sFontType1Map[2 * glyph + 1]];
+                break;
+            case 6:
+                width = 8;
+                break;
+            default:
+                width = 8;
+            }
+        }
+    }
+
+    return width;
+}
+ */

@@ -152,3 +152,45 @@ continue2:
     pop r4-r7
     pop r1
     bx r1
+
+/*
+原函数
+static s32 DrawGlyphTiles(struct Window *win, u32 glyph, u32 glyphWidth)
+{
+    struct GlyphTileInfo glyphTileInfo;
+    u8 *upperTile;
+    u8 *lowerTile;
+    s32 retVal = 0;
+
+    GetGlyphTilePointers(win->fontNum, win->language, glyph, &upperTile, &lowerTile);
+    glyphTileInfo.textMode = win->textMode;
+    glyphTileInfo.startPixel = (win->left + win->cursorX) & 7;
+    glyphTileInfo.width = glyphWidth;
+    glyphTileInfo.src = upperTile;
+    glyphTileInfo.dest = (u32 *)(win->tileData + 32 * GetCursorTileNum(win, 0, 0));
+    glyphTileInfo.colors = sGlyphBuffer.colors;
+
+    switch (win->fontNum)
+    {
+    case 0:
+    case 1:
+    case 2:
+    case 6:
+        DrawGlyphTile_UnshadowedFont(&glyphTileInfo);
+        glyphTileInfo.src = lowerTile;
+        glyphTileInfo.dest = (u32 *)(win->tileData + 32 * GetCursorTileNum(win, 0, 1));
+        retVal = DrawGlyphTile_UnshadowedFont(&glyphTileInfo);
+        break;
+    case 3:
+    case 4:
+    case 5:
+        DrawGlyphTile_ShadowedFont(&glyphTileInfo);
+        glyphTileInfo.src = lowerTile;
+        glyphTileInfo.dest = (u32 *)(win->tileData + 32 * GetCursorTileNum(win, 0, 1));
+        retVal = DrawGlyphTile_ShadowedFont(&glyphTileInfo);
+        break;
+    }
+
+    return retVal;
+}
+ */

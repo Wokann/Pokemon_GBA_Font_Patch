@@ -42,6 +42,12 @@ data文件夹内附带了一份测试汉化文本。
 
 地址：https://github.com/Kingcom/armips
 
+## 宝可梦反编译工程
+
+组织：pret
+
+地址：https://github.com/pret
+
 ## 红宝石、火红、绿宝石美版中字增益版
 
 作者及鸣谢人员：enler,liuyanghejerry,Roy,luojingmin,飞眼,某位嵌入式开发的圈外人

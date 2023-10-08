@@ -163,6 +163,10 @@ F3=Ü
 F4=ä
 F5=ö
 F6=ü
+
+FA=\l ;scroll up window text
+FB=\p ;new paragraph
+FE=\n ;new line
 FF=$
 
 FC01={COLOR}

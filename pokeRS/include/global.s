@@ -2,6 +2,7 @@
 DrawGlyphTile_ShadowedFont      equ 0x08005680
 GetCursorTileNum                equ 0x080069D8
 UpdateTilemap                   equ 0x08006954
+gMiscBlank_Gfx                  equ 0x082089DC
 /* 
 .definelabel DrawGlyphTile_ShadowedFont ,0x08005680
 .definelabel GetCursorTileNum           ,0x080069D8

@@ -1,4 +1,3 @@
-.org GetGlyphWidthChineseAddress
 GetGlyphWidthChinese:
     ldrb r2, [r0, 2]
     cmp r2, 2

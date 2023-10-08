@@ -1,11 +1,11 @@
-.org GetGlyphWidthjump
+.org GetGlyphWidth + 2
     bl GetGlyphWidthChinese
 
-.org DrawGlyphTilesjump
+.org DrawGlyphTiles + 2
     bl DrawGlyphTilesChinese
 
-.org changeRam1
-.byte 0x32  ;32 4F ldr r7,[pc,0xC8];=0x04000008
+.org sub_80451A0 + 0x1EA
+    ldr r7,[pc,0xC8]    ;=0x04000008
 
-.org changeRam2
-.byte 0x06  ;.word 0x04000006
+.org sub_80451A0 + 0x228
+.word 0x04000006        ;.word 0x04000006

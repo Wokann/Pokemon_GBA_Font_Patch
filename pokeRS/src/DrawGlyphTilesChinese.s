@@ -1,4 +1,4 @@
-.org DrawGlyphTilesChineseAddress
+.org gMiscBlank_Gfx
 DrawGlyphTilesChinese:
     ldrb r6, [r0, 1]
     sub sp, 0x1C

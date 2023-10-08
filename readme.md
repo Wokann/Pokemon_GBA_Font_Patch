@@ -26,11 +26,11 @@
 
 # 构建方法
 
-1.将宝可梦英文原版`****.gba`重命名为`baserom.gba`；
+1.将宝可梦英文原版`****.gba`重命名为`baserom_**.gba`；(**=R,S,FR,LG,E)
 
-2.将`baserom.gba`分别置于对应版本的目录下，如红宝石，即`Pokemon_GBA_Font_Patch/pokeRS/baserom.gba`；
+2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即`Pokemon_GBA_Font_Patch/pokeRS/baserom_R.gba`；
 
-3.点击`build.bat`即可自动生成插入了汉字字库的rom `pokeruby_chsfont.gba`。
+3.点击`build.bat`即可自动生成插入了汉字字库的rom，如红宝石为 `chsfontrom_R.gba`。
 
 data文件夹内附带了一份测试汉化文本。
 

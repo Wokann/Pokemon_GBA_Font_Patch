@@ -20,7 +20,7 @@
 .include "./src/UpdateSafariBallsTextInHealthboxChinese.s"
 .include "./src/UpdateLeftNoOfBallsTextOnHealthboxChinese.s"
 
-;中文字模
+;图片及中文字模
 .include "./graphic/graphic.s"
 
 ;测试文本

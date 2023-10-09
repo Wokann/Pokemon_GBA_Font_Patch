@@ -13,8 +13,12 @@
 .include "./src/HackInOrigin.s"
 
 ;中文相关函数
-.include "./src/DrawGlyphTilesChinese.s"
+.org HackStart  ;gMiscBlank_Gfx
 .include "./src/GetGlyphWidthChinese.s"
+.include "./src/GetStringWidthChinese.s"
+.include "./src/DrawGlyphTilesChinese.s"
+.include "./src/UpdateSafariBallsTextInHealthboxChinese.s"
+.include "./src/UpdateLeftNoOfBallsTextOnHealthboxChinese.s"
 
 ;中文字模
 .include "./graphic/graphic.s"

@@ -1,4 +1,6 @@
 ;HackFunctionAddress
 HackStart                       equ 0x0820896C
-PokeRSFontChsSymAddress         equ 0x08EA39C0
+PokeRSFontChsSymAddress         equ 0x08EA3B6C
 PokeRSFontChsAddress            equ 0x09000000
+PokeRSFontChsNormal             equ 0x09000000
+PokeRSFontChsSmall              equ 0x09100000

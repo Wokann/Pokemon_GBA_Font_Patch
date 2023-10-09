@@ -1,41 +1,59 @@
 GetGlyphWidthChinese:
-    ldrb r2, [r0, 2]
-    cmp r2, 2
+    ldrb r2, [r0, 2]            ;win->language
+    cmp r2, LANGUAGE_JAPANESE   ;if(win->language != LANGUAGE_JAPANESE)
+    beq backtoorigin2
+    ldrb r2, [r0, 0xE]          ;width = win->spacing
+    cmp r2, 0                   ;if(!win->spacing)
     bne backtoorigin2
-    ldrb r2, [r0, 0xE]
-    cmp r2, 0
-    bne backtoorigin2
-    ldrb r2, [r0, 1]
-    cmp r2, 3
-    beq checkchinese2
-    cmp r2, 4
-    beq checkchinese2
+    ldrb r2, [r0, 1]            ;win->fontNum
+    cmp r2, FONT_BRAILLE        ;if(win->fontNum != FONT_BRAILLE)
+    bne Ifischinese2
 
 backtoorigin2:
-    mov r2, r0
-    mov r3, r1
+    mov r2, r0                  ;r2 = *win
+    mov r3, r1                  ;r3 = glyph
     bx lr
 
-checkchinese2:
+Ifischinese2:
     cmp r1, 1
-    blt backtoorigin2
+    blt backtoorigin2            ;glyph < 0x01
     cmp r1, 0x1E
-    bgt backtoorigin2
+    bgt backtoorigin2            ;glyph > 0x1E
     cmp r1, 6
-    beq backtoorigin2
+    beq backtoorigin2            ;glyph == 0x6
     cmp r1, 0x1B
-    beq backtoorigin2
+    beq backtoorigin2            ;glyph == 0x1B
+
+    push r1
+    ldr r3, [r0, 0x20]          ;r3 = win->*text
+    ldrh r1, [r0, 0x1E]         ;r1 = win->*text[win->textIndex]
+    add r3,r3,r1
+    ldrb r3,[r3,0]
+    pop r1
+    cmp r3,0xF6
+    bgt backtoorigin2
 
 getchinesewidth:
-    mov r3, 0xA
-    lsl r2, r2, 1
-    sub r2, r3, r2
-    mov r3, r1
-    mov r1, r2
-    mov r2, r0
-    mov r0, r1
+    cmp r2, FONT_NORMAL_UNSHADOWED  ;win->fontNum == 0
+    beq getnormalfontwidth
+    cmp r2, FONT_NORMAL_SHADOWED    ;win->fontNum == 3
+    beq getnormalfontwidth
+
+getsmallfontwidth:                  ;1,2,4,5
+    mov r2, 0x2
+    b end1
+    
+getnormalfontwidth:                 ;0,3
+    mov r2, 0x4
+
+end1:
+    mov r3, r1                      ;r3 = glyph
+    mov r1, r2                      ;r1 = width
+    mov r2, r0                      ;r2 = *win
+    mov r0, r1                      ;r0 = width
     pop r1
     bx r1
+
 
 /*
 原函数

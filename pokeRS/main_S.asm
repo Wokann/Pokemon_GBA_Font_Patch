@@ -13,7 +13,7 @@
 .include "./src/HackInOrigin.s"
 
 ;中文相关函数
-.org HackStart  ;gMiscBlank_Gfx
+.org HackStart
 .include "./src/GetGlyphWidthChinese.s"
 .include "./src/GetStringWidthChinese.s"
 .include "./src/DrawGlyphTilesChinese.s"

@@ -21,8 +21,10 @@
 .word 0x04000006                                    ;0x080453C8
 
 ;用于狩猎地带HP框，狩猎球名字的完整显示
-.org UpdateSafariBallsTextInHealthbox + 0x46        ;0x080458F6
-    bl UpdateSafariBallsTextInHealthboxChinese
+.org UpdateSafariBallsTextInHealthbox + 0x30        ;0x080458E0
+    mov r1,4    ;狩猎球3个字仅占4个tile
+.skip 0x14
+    bl UpdateSafariBallsTextInHealthboxChinese      ;0x080458F6
 .skip 0x92
 .word BattleText_SafariBalls                        ;0x0804598C
 
@@ -36,7 +38,7 @@
     mov r14,r0
     b UpdateLeftNoOfBallsTextOnHealthbox + 0x8C     ;=0x08045A24
 .skip 0x2A
-.word BattleText_SafariBallsLeft + 1                ;0x08045A3C
+.word BattleText_SafariBallsLeft                    ;0x08045A3C
 .skip 0x4
 .word BattleText_HighlightRed                       ;0x08045A44
 

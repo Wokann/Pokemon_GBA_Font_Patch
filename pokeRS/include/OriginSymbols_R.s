@@ -27,6 +27,7 @@ gMainMenuString_NewGame                 equ 0x0840dcd0
 PCText_PokeCenter                       equ 0x08410b1b
 
 ;graphic
+gFont3LatinGlyphs                       equ 0x08ea2c44
 gPSSMenuHeader_Tilemap                  equ 0x08e8e128
 
 ;define

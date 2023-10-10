@@ -19,7 +19,7 @@
 .include "./src/RenderTextChinese.s"
 
 ;图片及中文字模
-;.include "./graphic/graphic.s"
+.include "./graphic/graphic.s"
 
 ;测试文本
 ;.include "./strings/testText.s"

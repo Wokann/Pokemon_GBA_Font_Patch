@@ -10,7 +10,11 @@ sTextOnWindowsInfo_Normal           equ 0x083feb64
 
 
 ;graphic
+sFontNormalCopy1LatinGlyphs         equ 0x081f3100
 sFontMaleLatinGlyphs                equ 0x0820f618
+sFontNormalLatinGlyphs              equ 0x081ff300
+sFontFemaleLatinGlyphs              equ 0x0821f930
+
 
 ;define
 FONT_SMALL_SHADOWED                     equ 0

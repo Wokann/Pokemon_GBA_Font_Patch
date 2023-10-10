@@ -13,7 +13,7 @@
 .include "./src/HackInOrigin.s"
 
 ;中文相关函数
-.org HackStart  ;sFontMaleLatinGlyphs + 0x40
+.org HackStart
 ;.include "./src/GetGlyphWidthChinese.s"
 ;.include "./src/GetStringWidthChinese.s"
 .include "./src/RenderTextChinese.s"

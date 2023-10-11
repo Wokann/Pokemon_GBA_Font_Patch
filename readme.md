@@ -1,7 +1,8 @@
 # Pokemon_GBA_Font_Patch
 * 宝可梦3代GBA汉字字库补丁（增益优化版）
 
-（红蓝宝石已完成，火红叶绿绿宝石待更新）
+增益优化版：红蓝宝石已完成，火红叶绿、绿宝石待更新
+原始增益版：红宝石、火红已完成，绿宝石待更新
 
 # 介绍
 
@@ -35,7 +36,7 @@
 * 绿宝石： `baserom_E.gba`。
 
 2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即
-`Pokemon_GBA_Font_Patch/pokeRS/baserom_R.gba`；
+`Pokemon_GBA_Font_Patch/pokeRS/baserom_R.gba`。
 
 3.点击`build.bat`即可自动生成增益优化版的rom。
 * 红宝石： `chsfontrom_R.gba`。
@@ -60,7 +61,7 @@ P.S.strings文件夹内附带了一份测试汉化文本。
 * 绿宝石： `baserom_E.gba`。
 
 2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即
-`Pokemon_GBA_Font_Patch/old_(PMxxUS_CHPLUS_RELEASE)/PMRUS_CHPLUS_RELEASE1/baserom_R.gba`；
+`Pokemon_GBA_Font_Patch/old_(PMxxUS_CHPLUS_RELEASE)/PMRUS_CHPLUS_RELEASE1/baserom_R.gba`。
 
 3.点击`build.bat`即可自动生成原始发布的增益版的rom。
 * 红宝石： `PMRUS_CHPLUS_RELEASE1.gba`。

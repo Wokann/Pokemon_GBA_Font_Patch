@@ -27,7 +27,12 @@
 
 # 增益优化版构建方法
 
-1.将宝可梦英文原版`****.gba`重命名为`baserom_**.gba`；(**=R,S,FR,LG,E)(分别对应红宝石、蓝宝石、火红、叶绿、绿宝石)
+1.将宝可梦英文原版`****.gba`重命名为`baserom_**.gba`。
+* 红宝石： `baserom_R.gba`。
+* 蓝宝石： `baserom_S.gba`。
+* 火　红： `baserom_FR.gba`。
+* 叶　绿： `baserom_LG.gba`。
+* 绿宝石： `baserom_E.gba`。
 
 2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即`Pokemon_GBA_Font_Patch/pokeRS/baserom_R.gba`；
 
@@ -48,7 +53,10 @@ P.S.strings文件夹内附带了一份测试汉化文本。
 
 构建方法大致同增益优化版。
 
-1.将宝可梦英文原版`****.gba`重命名为`baserom_**.gba`；(**=R,FR,E)(分别对应红宝石、火红、绿宝石)
+1.将宝可梦英文原版`****.gba`重命名为`baserom_**.gba`。
+* 红宝石： `baserom_R.gba`。
+* 火　红： `baserom_FR.gba`。
+* 绿宝石： `baserom_E.gba`。
 
 2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即`Pokemon_GBA_Font_Patch/old_(PMxxUS_CHPLUS_RELEASE)/PMRUS_CHPLUS_RELEASE1/baserom_R.gba`；
 

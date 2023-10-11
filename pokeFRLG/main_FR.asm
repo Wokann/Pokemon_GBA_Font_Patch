@@ -19,6 +19,8 @@
 .include "./src/RenderTextChinese.s"
 
 ;图片及中文字模
+;.org 0x09000000
+;.fill 0x01000000,0xFF   ;扩容至32MB
 .include "./graphic/graphic.s"
 
 ;测试文本

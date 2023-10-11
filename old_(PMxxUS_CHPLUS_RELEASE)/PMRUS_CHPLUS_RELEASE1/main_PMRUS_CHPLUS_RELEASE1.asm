@@ -19,7 +19,7 @@
 .org HackStart + 0x224  ;0x080208C00
 .include "./src/GetGlyphWidthChinese.s"
 
-;中文字模
+;图片及中文字模
 .org 0x09000000
 .fill 0x01000000,0x00   ;扩容至32MB
 .include "./graphic/graphic.s"

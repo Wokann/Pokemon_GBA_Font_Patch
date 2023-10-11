@@ -59,8 +59,8 @@ getChsFontGlyph:
     beq getChsSmallFont
 
 getChsNormalFont:
-    mov r6,1;gGlyphInfo.width = sFont4JapaneseGlyphWidths[1] = 0xC;         
-    ldr r0,[pc,0];=PokeFRLGEFontChsNormal
+    mov r6,1        ;gGlyphInfo.width = sFontMaleLatinGlyphWidths[1] = 0xC;         
+    ldr r0,[pc,0]   ;=PokeFRLGEFontChsNormal
     b jumptoDecompressGlyph
 .word PokeFRLGEFontChsNormal
 
@@ -70,11 +70,12 @@ jumptoDecompressGlyph:
 .pool
 
 getChsSmallFont:
-    mov r6,2;gGlyphInfo.width = sFont4JapaneseGlyphWidths[2] = 0xC;
+    mov r6,2        ;gGlyphInfo.width = sFontMaleLatinGlyphWidths[2] = 0xC;
     ldr r0,=PokeFRLGEFontChsSmall
     b jumptoDecompressGlyph
 .pool
 
+;疑似为3500字增益版扩容至6763汉字后，后续补充的判定代码。故在代码末尾补充，而非原位按顺序继续判定。
 calc_1Bh:
     cmp r0,0x1B
     beq backtoorigin

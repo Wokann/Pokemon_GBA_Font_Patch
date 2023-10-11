@@ -62,8 +62,8 @@
 
 1.将宝可梦英文rev1.0原版`****.gba`重命名为`baserom_**.gba`。
 * 红宝石： `baserom_R.gba`。
-* 火　红： `baserom_FR.gba`。
 * 绿宝石： `baserom_E.gba`。
+* 火　红： `baserom_FR.gba`。
 
 2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即
 

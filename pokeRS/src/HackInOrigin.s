@@ -18,7 +18,7 @@
 .org UpdateNickInHealthbox + 0x1EA                  ;0x0804538A
     ldr r7,[pc,0xC8];=0x04000008
 .skip 0x3C
-.word 0x04000006                                    ;0x080453C8
+    .word 0x04000006                                ;0x080453C8
 
 ;用于狩猎地带HP框，狩猎球名字的完整显示
 .org UpdateSafariBallsTextInHealthbox + 0x30        ;0x080458E0
@@ -26,7 +26,7 @@
 .skip 0x14
     bl UpdateSafariBallsTextInHealthboxChinese      ;0x080458F6
 .skip 0x92
-.word BattleText_SafariBalls                        ;0x0804598C
+    .word BattleText_SafariBalls                    ;0x0804598C
 
 ;用于狩猎地带HP框，剩余球数的完整显示
 .org UpdateLeftNoOfBallsTextOnHealthbox + 0x5A      ;0x080459F2
@@ -38,9 +38,9 @@
     mov r14,r0
     b UpdateLeftNoOfBallsTextOnHealthbox + 0x8C     ;=0x08045A24
 .skip 0x2A
-.word BattleText_SafariBallsLeft                    ;0x08045A3C
+    .word BattleText_SafariBallsLeft                ;0x08045A3C
 .skip 0x4
-.word BattleText_HighlightRed                       ;0x08045A44
+    .word BattleText_HighlightRed                   ;0x08045A44
 
 ;用于宝可梦寄放系统内右侧的标记图形显示位置
 .org sub_8097F58 + 0x2E                             ;0x08097F86

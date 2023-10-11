@@ -60,10 +60,22 @@ P.S.strings文件夹内附带了一份测试汉化文本。
 
 2.将`baserom_**.gba`分别置于对应版本的目录下，如红宝石，即`Pokemon_GBA_Font_Patch/old_(PMxxUS_CHPLUS_RELEASE)/PMRUS_CHPLUS_RELEASE1/baserom_R.gba`；
 
-3.点击`build.bat`即可自动生成原始发布的增益版的rom。文件夹内提供对应rom的.sha1文件以供校验。
+3.点击`build.bat`即可自动生成原始发布的增益版的rom。
 * 红宝石： `PMRUS_CHPLUS_RELEASE1.gba`。
 * 绿宝石： `PMEMUS_CHPLUS_RELEASE2.gba`。
 * 火　红： `PMFRUS_CHPLUS_RELEASE3.gba`。
+
+SHA1：
+* 红宝石 PMRUS_CHPLUS_RELEASE1.gba：
+`b8fbf478b8e923dfc4a80770f0f2781b0942ce2a`
+
+* 绿宝石 PMEMUS_CHPLUS_RELEASE2.gba：
+`d7ca85e7d52319fdc049bb3f376c93a637dfd760`
+
+* 火　红 PMFRUS_CHPLUS_RELEASE3.gba：
+`2f371567441333edd1be77c01e54f5430499da9b`
+
+原始增益版各自文件夹内也提供对应rom的.sha1文件以供校验。
 
 # credit
 

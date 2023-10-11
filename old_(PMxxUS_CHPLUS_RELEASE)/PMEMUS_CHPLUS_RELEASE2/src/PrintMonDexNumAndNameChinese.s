@@ -7,6 +7,7 @@ backtoorigin:
     ldr r3,[sp,0x2c]
     bx lr
 
+;Ifischinese1代码没有被任何指令调用，可被精简删去
 Ifischinese1:
     ldrb r4,[r2,0x0]
     cmp r4,0x1

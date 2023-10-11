@@ -47,7 +47,9 @@
 * 叶　绿： `chsfontrom_LG.gba`。
 * 绿宝石： `chsfontrom_E.gba`。
 
-P.S.strings文件夹内附带了一份测试汉化文本。
+注：
+* strings文件夹内附带了部分汉化测试文本。
+* 可根据实际改版rom的情况，修改include内相关函数的地址定义，以适配不同改版rom插入中文补丁。
 
 # 原始增益版构建
 

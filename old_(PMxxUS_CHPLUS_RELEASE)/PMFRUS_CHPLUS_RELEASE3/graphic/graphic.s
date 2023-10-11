@@ -3,7 +3,7 @@
 
 .org PokeFRLGFontChsSmall
 .incbin "./graphic/fonts/PokeFRLGFontChsSmall(0x70000).bin"
-
+/*
 .org PokeFRLGFontChsSymAddress1
 .incbin "./graphic/fonts/PokeFRLGFontChsSym(0x240).bin"
 
@@ -16,3 +16,4 @@
 .org PokeFRLGFontChsSymAddress4
 .incbin "./graphic/fonts/PokeFRLGFontChsSym(0x240).bin"
 
+*/

@@ -60,9 +60,9 @@ getChsFontGlyph:
 
 getChsNormalFont:
     mov r6,1        ;gGlyphInfo.width = sFontMaleLatinGlyphWidths[1] = 0xC;         
-    ldr r0,[pc,0]   ;=PokeFRLGEFontChsNormal
+    ldr r0,[pc,0]   ;=PokeFRLGFontChsNormal
     b jumptoDecompressGlyph
-.word PokeFRLGEFontChsNormal
+.word PokeFRLGFontChsNormal
 
 jumptoDecompressGlyph:
     ldr r4,=(DecompressGlyph_Male + 0xE8);0x080068d4
@@ -71,7 +71,7 @@ jumptoDecompressGlyph:
 
 getChsSmallFont:
     mov r6,2        ;gGlyphInfo.width = sFontMaleLatinGlyphWidths[2] = 0xC;
-    ldr r0,=PokeFRLGEFontChsSmall
+    ldr r0,=PokeFRLGFontChsSmall
     b jumptoDecompressGlyph
 .pool
 

@@ -1,11 +1,13 @@
-.org GetGlyphWidthjump
+;用于汉字单字宽度计算
+.org GetGlyphWidth + 2                              ;0x080048ea
     bl GetGlyphWidthChinese
 
-.org DrawGlyphTilesjump
+;用于输出汉字显示
+.org DrawGlyphTiles + 2                             ;0x08006876
     bl DrawGlyphTilesChinese
 
-.org changeRam1
-.byte 0x32  ;32 4F ldr r7,[pc,0xC8];=0x04000008
-
-.org changeRam2
-.byte 0x06  ;.word 0x04000006
+;用于对战HP框，宝可梦名字的完整显示
+.org UpdateNickInHealthbox + 0x1EA                  ;0x0804538A
+    ldr r7,[pc,0xC8];=0x04000008
+.skip 0x3C
+    .word 0x04000006                                ;0x080453C8

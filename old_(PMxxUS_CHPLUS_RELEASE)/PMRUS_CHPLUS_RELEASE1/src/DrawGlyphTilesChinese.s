@@ -1,15 +1,16 @@
-.org DrawGlyphTilesChineseAddress
 DrawGlyphTilesChinese:
     ldrb r6, [r0, 1]
     sub sp, 0x1C
-    cmp r6, 3
+    cmp r6, FONT_NORMAL_SHADOWED
     beq checkchinese
-    cmp r6, 4
+    cmp r6, FONT_SMALL_SHADOWED
     beq checkchinese
 
 backtoorigin:
-    mov r6, r0
+    .byte 0x06,0x46 ;mov r6, r0 
     bx lr
+;armips的mov编译调用的进制值与原增益版不同，
+;为确保进制值一致，改为强制byte输入，后续同理。
 
 checkchinese:
     cmp r1, 1
@@ -21,14 +22,14 @@ checkchinese:
     cmp r1, 0x1B
     beq backtoorigin
     ldrb r6, [r0, 2]
-    cmp r6, 2
+    cmp r6, LANGUAGE_ENGLISH
     bne backtoorigin
     nop
 
 ischinese:
-    mov r6, r0
+    .byte 0x06,0x46 ;mov r6, r0 
     ldr r0, [r6, 0x20]
-    mov r5, r2
+    .byte 0x15,0x46 ;mov r5, r2
     ldrh r2, [r6, 0x1E]
     add r0, r0, r2
     ldrb r0, [r0, 0]
@@ -52,7 +53,7 @@ getgylphid:
     lsl r1, r1, 8
     add r1, r1, r0
     ldrb r3, [r6, 1]
-    cmp r3, 4
+    cmp r3, FONT_SMALL_SHADOWED
     beq getsmallfont
 
 getnormalfont:
@@ -77,7 +78,7 @@ loadfontglyph:
     strb r0, [r1, 1]
     mov r0, 8
     strb r0, [r1, 2]
-    mov r0, r6
+    .byte 0x30,0x46 ;mov r0, r6
     mov r1, 0
     mov r2, 0
     bl GetCursorTileNum
@@ -96,7 +97,7 @@ conituefont:
     ldr r0, [sp, 8]
     add r0, 0x20
     str r0, [sp, 8]
-    mov r0, r6
+    .byte 0x30,0x46 ;mov r0, r6
     mov r1, 0
     mov r2, 1
     bl GetCursorTileNum
@@ -106,8 +107,8 @@ conituefont:
     str r1, [sp, 0xC]
     add r0, sp, 4
     bl DrawGlyphTile_ShadowedFont
-    mov r1, r0
-    mov r0, r6
+    .byte 0x01,0x46 ;mov r1, r0
+    .byte 0x30,0x46 ;mov r0, r6
     bl UpdateTilemap
     ldr r0, [sp, 8]
     add r0, 0x20
@@ -125,7 +126,7 @@ conituefont:
     strh r0, [r6, 0x1C]
 
 continue2:
-    mov r0, r6
+    .byte 0x30,0x46 ;mov r0, r6
     mov r1, 0
     mov r2, 0
     bl GetCursorTileNum
@@ -138,7 +139,7 @@ continue2:
     ldr r0, [sp, 8]
     add r0, 0x20
     str r0, [sp, 8]
-    mov r0, r6
+    .byte 0x30,0x46 ;mov r0, r6
     mov r1, 0
     mov r2, 1
     bl GetCursorTileNum

@@ -1,5 +1,5 @@
-.org PokeRSFontChsAddress
-.incbin "./graphic/font/PokeRSFontChs(0x200000).bin"
+.org PokeRSFontChsNormal
+.incbin "./graphic/fonts/PokeRSFontChsNormal(0xE0000).bin"
 
-.org PokeRSFontChsSymAddress
-.incbin "./graphic/font/PokeRSFontChsSym(EA39C0-EA3BFF).bin"
+.org PokeRSFontChsSmall
+.incbin "./graphic/fonts/PokeRSFontChsSmall(0xE0000).bin"

@@ -20,7 +20,7 @@
     ldrb r0,[r0,0]
     lsl r0,r0,0x1C
     lsr r0,r0,0x1C
-    cmp r0,LANGUAGE_JAPANESE
+    cmp r0,1
     beq @@BackToOrigin
 @@IfIsBraille:
     ldrb r0,[r4,0]

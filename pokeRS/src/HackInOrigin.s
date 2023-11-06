@@ -42,11 +42,11 @@
 .skip 0x4
     .word BattleText_HighlightRed                   ;0x08045A44
 
-;用于宝可梦寄放系统内右侧的标记图形显示位置
+;用于宝可梦寄放系统内左侧的标记图形显示位置
 .org sub_8097F58 + 0x2E                             ;0x08097F86
     mov r0,0x9C
     
-;用于宝可梦寄放系统内右侧的持有物文本显示位置
+;用于宝可梦寄放系统内左侧的持有物文本显示位置
 .org PrintDisplayMonInfo + 0x11A                    ;0x0809830A
     mov r3,0x12
 .skip 0xA

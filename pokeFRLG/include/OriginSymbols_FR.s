@@ -5,6 +5,10 @@ DecompressGlyph_Male                equ 0x080067ec
 SaveStatToString                    equ 0x080f7fcc 
 sFontMaleLatinGlyphWidths           equ 0x08217618
 sTextOnWindowsInfo_Normal           equ 0x083feb64
+DaycarePrintMonLvl                  equ 0x08046944
+StringCopy                          equ 0x08008d84
+strcpy                              equ 0x081E5F88
+
 
 ;strings
 

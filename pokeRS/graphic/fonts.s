@@ -8,6 +8,3 @@
 
 .org PokeRSFontChsSymAddress
 .incbin "./graphic/fonts/PokeRSFontChsSym(0x240).bin"
-
-.org gPSSMenuHeader_Tilemap
-.incbin "./graphic/pokemon_storage/header.bin.lz"

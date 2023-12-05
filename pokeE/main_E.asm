@@ -16,6 +16,8 @@
 .include "./src/HookInOrigin/GetStringWidth.s"
 ;;3、图鉴汉字显示位置调整
 .include "./src/HookInOrigin/PrintMonDexNumAndName.s"
+;;4、SeedRNG随机数生成修复
+.include "./src/HookInOrigin/SeedRNGFix.s"
 
 ;新功能函数
 .org HackFunctionAddresses
@@ -26,6 +28,8 @@
 .include "./src/HackFunction/GetStringWidthChinese.s"
 ;;3、图鉴汉字显示位置调整
 .include "./src/HackFunction/PrintMonDexNumAndNameChinese.s"
+;;4、SeedRNG随机数生成修复
+.include "./src/HackFunction/SeedRNGFix.s"
 
 ;图片
 ;;1、汉字字库程序

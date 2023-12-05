@@ -5,6 +5,9 @@ PrintMonDexNumAndName                   equ 0x080bce2c
 CreateInterfaceSprites                  equ 0x080bdb7c  ;用于宝可梦图鉴内的，而非同名函数用于抽奖的
 gFontNormalLatinGlyphWidths             equ 0x086542e4
 GetStringWidth                          equ 0x08005ED8
+AgbMain                                 equ 0x080003A4
+RtcGetMinuteCount                       equ 0x0802f664
+SeedRng                                 equ 0x0806f5f8
 
 ;strings
 

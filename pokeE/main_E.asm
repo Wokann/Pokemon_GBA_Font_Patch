@@ -17,7 +17,10 @@
 ;;3、图鉴汉字显示位置调整
 .include "./src/HookInOrigin/PrintMonDexNumAndName.s"
 ;;4、SeedRNG随机数生成修复
-.include "./src/HookInOrigin/SeedRNGFix.s"
+;;;红蓝宝石风格
+.include "./src/HookInOrigin/SeedRNGFix_RS.s"
+;;;火红叶绿风格
+.include "./src/HookInOrigin/SeedRNGFix_FRLG.s"
 
 ;新功能函数
 .org HackFunctionAddresses
@@ -29,7 +32,10 @@
 ;;3、图鉴汉字显示位置调整
 .include "./src/HackFunction/PrintMonDexNumAndNameChinese.s"
 ;;4、SeedRNG随机数生成修复
-.include "./src/HackFunction/SeedRNGFix.s"
+;;;红蓝宝石风格
+.include "./src/HackFunction/SeedRNGFix_RS.s"
+;;;火红叶绿风格
+.include "./src/HackFunction/SeedRNGFix_FRLG.s"
 
 ;图片
 ;;1、汉字字库程序

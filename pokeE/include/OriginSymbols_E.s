@@ -6,8 +6,17 @@ CreateInterfaceSprites                  equ 0x080bdb7c  ;用于宝可梦图鉴�
 gFontNormalLatinGlyphWidths             equ 0x086542e4
 GetStringWidth                          equ 0x08005ED8
 AgbMain                                 equ 0x080003A4
+MainState_Exit                          equ 0x080E347C
 RtcGetMinuteCount                       equ 0x0802f664
 SeedRng                                 equ 0x0806f5f8
+SeedRngAndSetTrainerId                  equ 0x08000560
+CB2_InitCopyrightScreenAfterBootup      equ 0x0816CEAC
+GetSaveBlocksPointersBaseOffset         equ 0x0815355C
+Task_TitleScreenPhase3                  equ 0x080aad64
+FadeOutBGM                              equ 0x0809a590
+CB2_InitTitleScreen                     equ 0x080aa7a4
+StartTimer1                             equ 0x08000554
+SetVBlankCallback                       equ 0x080006f0
 
 ;strings
 

@@ -1,4 +1,4 @@
-.func SeedRNGFix
+.func SeedRNGFix_RS
     bl SeedRngWithRtc
     ldr r0,=0x03002700
     mov r4,0

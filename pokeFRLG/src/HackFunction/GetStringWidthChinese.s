@@ -26,6 +26,7 @@
     ldrb r0,[r4,1]
     cmp r0,0xF7
     bge @@GetOriginWidth
+    add r4,1
     b @@GetChineseWidth
 
 @@GetOriginWidth:
@@ -42,12 +43,9 @@
     beq @@GetChsSmallWidth
 @@GetChsNormalWidth:
     mov r0,0xC
-    b @@AddChinesechar
+    b @@AfterGetWidth
 @@GetChsSmallWidth:
     mov r0,0xA
-@@AddChinesechar:
-    add r4,1
-    b @@AfterGetWidth
 
 @@AfterGetWidth:
     push r0

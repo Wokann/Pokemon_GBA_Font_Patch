@@ -26,6 +26,7 @@
     ldrb r0,[r4,1]
     cmp r0,0xF7
     bge @@GetOriginWidth
+@@AddChinesechar:
     add r4,1
     b @@GetChineseWidth
 

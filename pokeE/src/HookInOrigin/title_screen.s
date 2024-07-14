@@ -1,3 +1,8 @@
+.include "./include/title_screen.h"
+.include "./include/naming_screen.h"
+.include "./include/hack_function_switch.h"
+
+.if (SeedRNGFix_OPTION == SeedRNGFix_FRLG)
 //红蓝宝石seed生成机制：
 //----1、开机后根据RTC生成初始seed，调用SeedRngWithRtc
 //火红叶绿seed生成机制：
@@ -10,7 +15,7 @@
 //----1、新游戏建档主角命名时提取timer1值作为初始seed，调用SeedRngAndSetTrainerId
 //----2、其他时候初始seed均为0x0000
 
-//绿宝石转火红叶绿风格seed生成机制：
+//【绿宝石转火红叶绿风格seed生成机制】：
 //----1、保留新游戏建档主角命名时提取timer1值作为初始seed
 //----2、由于绿宝石检测存档情况位于刚开机gamefreak界面前，
 //-------在此处开启timer1计时及提取数值作为初始seed，将始终为定值，故不能仿照火叶对应的函数进行插入
@@ -28,3 +33,4 @@
 
 //.org MainState_Exit + 0x20    ;0x080E349C
 //  bl SeedRngAndSetTrainerId
+.endif

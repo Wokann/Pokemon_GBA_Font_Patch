@@ -1,3 +1,5 @@
+.include "./include/pokedex.h"
+
 ;用于修改宝可梦图鉴界面，宝可梦名的位置，往左偏移4像素
 .org PrintMonDexNumAndName + 0x1C        ;0x080BCE48
    ldr r5,=PrintMonDexNumAndNameChinese

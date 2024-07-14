@@ -1,3 +1,6 @@
+.include "./include/pokedex.h"
+.include "./include/graphics.h"
+
 .func PrintMonDexNumAndNameChinese
     add r5,r4,0
     mov r4,0xF
@@ -8,18 +11,18 @@
     lsl r4,r4,0x1B
     lsr r4,r4,0x18
 
-CheckIfIsName:
+ @@CheckIfIsName:
     cmp r4,0xB0             ;图鉴编号为0x12 * 8，宝可梦名为0x16 * 8
-    bne BackToOrigin
+    bne @@BackToOrigin
     sub r4,4                ;宝可梦名时 0x16 * 8 - 4
 
-BackToOrigin:
+ @@BackToOrigin:
     push r4
-    ldr r4,=PrintMonDexNumAndName + 0x2C    ;0x08BCE58
+    ldr r4,=(PrintMonDexNumAndName + 0x2C)    ;0x08BCE58
     mov r8,r4
     pop r4
     mov pc,r8
-.pool
+    .pool
 .endfunc
 
 /*

@@ -4,11 +4,10 @@ setlocal enabledelayedexpansion
     set "WorkPath=%~dp0"
     cd /d %WorkPath%
     
-    set "tool_armips=.\tools\armips\armips.exe"
     set "armips_main=.\main_E.asm"
-
     set "Origin_Rom_Name=baserom_E"
 
+    set "tool_armips=.\tools\armips\armips.exe"
     set "Origin_Rom=.\%Origin_Rom_Name%.gba"
     set "Chinese_Patched_Rom=.\%Origin_Rom_Name%_chs.gba"
     set "Chinese_Patched_Sym=.\%Origin_Rom_Name%_chs.sym"
@@ -24,8 +23,8 @@ setlocal enabledelayedexpansion
         %tool_armips% %armips_main% ^
             -strequ Origin_Rom          "%Origin_Rom%" ^
             -strequ Chinese_Patched_Rom "%Chinese_Patched_Rom%" ^
-            -sym    %Chinese_Patched_Sym% ^
-            -temp   %Chinese_Patched_Temp% ^
+            -sym    "%Chinese_Patched_Sym%" ^
+            -temp   "%Chinese_Patched_Temp%" ^
             -stat ^
             -erroronwarning ^
             || (

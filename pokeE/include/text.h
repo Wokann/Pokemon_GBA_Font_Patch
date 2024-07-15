@@ -6,8 +6,6 @@
 .definelabel DecompressGlyphTile,       0x08004C10
 .definelabel RenderText,                0x080057b4
 .definelabel GetStringWidth,            0x08005ED8
-.definelabel DecompressGlyph_Normal,    0x08006840
-.definelabel gFontNormalLatinGlyphWidths,0x086542e4
 
 .definelabel FONT_SMALL,            0
 .definelabel FONT_NORMAL,           1

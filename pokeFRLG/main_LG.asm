@@ -1,13 +1,13 @@
 .gba
 .thumb
 .loadtable "./PMRSEFRLG_charmap.txt"
-.create "./chsfontrom_FR.gba",0x08000000
+.create "./chsfontrom_LG.gba",0x08000000
 .close
-.open "./baserom_FR.gba","./chsfontrom_FR.gba",0x08000000
+.open "./baserom_LG.gba","./chsfontrom_LG.gba",0x08000000
 
 ;定义函数地址
-.include "./include/OriginSymbols_FR.s"
-.include "./include/hackSymbols_FR.s"
+.include "./include/OriginSymbols_LG.s"
+.include "./include/hackSymbols_LG.s"
 
 ;原址修改或跳转
 ;;1、汉字字库程序
@@ -35,6 +35,6 @@
 .include "./graphic/fonts.s"
 
 ;测试文本
-.include "./strings/testText_FR.s"
+.include "./strings/testText_LG.s"
 
 .close

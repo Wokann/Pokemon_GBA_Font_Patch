@@ -3,8 +3,8 @@
     ldr r3,=RenderTextChinese
     mov pc,r3
 .pool
-    
+
 ;用于汉字宽度计算
-.org sFontMaleLatinGlyphWidths + 0x1                ;0x08217619
+.org sFontMaleLatinGlyphWidths + 0x1                ;FR_0x08217619 LG_0x082175f5
     .byte 0x0C  ;sFontMaleLatinGlyphWidths[1] = 0x0C
     .byte 0x0A  ;sFontMaleLatinGlyphWidths[2] = 0x0A
